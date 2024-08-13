@@ -5,9 +5,17 @@ const app = express();
 const port = process.env.PORT || 8000;
 app.use(express.json());
 
-app.get("/toptenrank", async (req, res) => {
+const extractVideoId = (url) => {
+	const regex =
+		/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^/\n\s]+\/\S+\/|v\/|embed\/|watch\?v=)|youtu\.be\/)([^"&?/\s]{11})/;
+	const match = url.match(regex);
+	return match ? match[1] : null;
+};
+
+app.get("/top/:count", async (req, res) => {
 	try {
-		const topSongs = await Song.find().sort({ rating: -1 }).limit(10);
+		const { count } = req.params;
+		const topSongs = await Song.find().sort({ rating: -1 }).limit(count);
 		res.status(200).json(topSongs);
 	} catch (err) {
 		console.error(err);
@@ -18,6 +26,7 @@ app.get("/toptenrank", async (req, res) => {
 app.post("/addsong", async (req, res) => {
 	try {
 		const newSong = new Song(req.body);
+		newSong.url = extractVideoId(newSong.url);
 		const savedSong = await newSong.save();
 		res.status(201).json(savedSong);
 	} catch (err) {

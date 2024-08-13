@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	/* outline: 1px solid lime; */
+}
+/* @font-face {
+	font-family: dancing-regular;
+	src: url("../assets/font/DancingScript-Regular.ttf");
+}
+@font-face {
+	font-family: dancing-bold;
+	src: url("../assets/font/DancingScript-Bold.ttf");
+}
+@font-face {
+	font-family: dancing-medium;
+	src: url("../assets/font/DancingScript-Medium.ttf");
+}
+@font-face {
+	font-family: dancing-semi-bold;
+	src: url("../assets/font/DancingScript-SemiBold.ttf");
+} */
+@font-face {
+	font-family: grand-hotel;
+	src: url("../assets/font/GrandHotel-Regular.ttf");
+}
+body,
+#root {
+	height: 100svh;
+	width: 100svw;
+	display: grid;
+	place-items: center;
+	gap: 2rem;
+	margin-bottom: 4rem;
+}
+
+.nav {
+	position: relative;
+	z-index: 0;
+}
+.nav:before {
+	content: "";
+	width: 60%;
+	height: 2px;
+	position: absolute;
+	background: #fff;
+	z-index: -1;
+}
+.nav > a:nth-of-type(2n-1) {
+	width: auto;
+	width: fit-content;
+	text-align: center;
+	font-family: dancing-regular;
+}
+.grand-hotel {
+	font-family: grand-hotel;
+}
+.nav-links {
+	text-shadow: 0.5rem 0.5rem 2rem black;
+	color: white;
+}
+.line {
+	height: 2px;
+	background-color: white;
+}
+.line:first-of-type,
+.line:last-of-type {
+	width: 30%;
+}
+.line:nth-of-type(2),
+.line:nth-of-type(3) {
+	width: 1.5rem;
+}

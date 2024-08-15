@@ -36,6 +36,6 @@ const SongSchema = new mongoose.Schema({
 	},
 });
 
-const Song = mongoose.model("songs", SongSchema);
+const Song = mongoose.model("bollywood_songs", SongSchema);
 
 module.exports = { Song, connectDB };

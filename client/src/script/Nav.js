@@ -7,15 +7,25 @@ function Nav() {
 			}}
 		>
 			<span className="line"></span>
-			<a href="/#about" className="text-3xl grand-hotel nav-links">
+			<a
+				href="/#about"
+				className="text-3xl grand-hotel nav-links text-white"
+			>
 				about site
 			</a>
 			<span className="line"></span>
-			<a href="/" className="text-7xl grand-hotel nav-links">
+			<a
+				href="/"
+				className="text-7xl grand-hotel nav-links text-emerald-400"
+				style={{ boxShadow: "0px 0px 0px transparent" }}
+			>
 				Melody
 			</a>
 			<span className="line"></span>
-			<a href="/leaderboard" className="text-3xl grand-hotel nav-links">
+			<a
+				href="/leaderboard"
+				className="text-3xl grand-hotel nav-links text-white"
+			>
 				leaderboard
 			</a>
 			<span className="line"></span>

@@ -62,8 +62,8 @@ body,
 	font-family: grand-hotel;
 }
 .nav-links {
-	text-shadow: 0.5rem 0.5rem 2rem black;
-	color: white;
+	text-shadow: 0.5rem 0.5rem 2rem #232323;
+	/* color: white; */
 }
 .line {
 	height: 2px;

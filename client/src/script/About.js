@@ -2,11 +2,14 @@ import React from "react";
 
 function About() {
 	return (
-		<div className="grid w-screen place-items-center my-8" id="about">
-			<h1 className="text-4xl font-semibold text-emerald-700 grand-hotel">
+		<div className="grid w-full place-items-center my-8" id="about">
+			<h1
+				className="text-4xl font-semibold"
+				style={{ color: "var(--col3)" }}
+			>
 				What is this?
 			</h1>
-			<p className="max-w-full w-3/4 text-center text-lg">
+			<p className="max-w-full w-3/4 text-center text-lg text-white">
 				Lorem ipsum dolor sit amet consectetur, adipisicing
 				elit.Repellendus voluptatum obcaecati reiciendis. Ut possimus
 				omnisplaceat dolor tenetur, quasi eveniet ex aspernatur

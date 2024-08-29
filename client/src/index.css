@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --col3-val: 57, 100%, 73%;
+    --col1: #897089;
+    --col2: #1f2937;
+    --col3: hsl(var(--col3-val));
+    --col4: hsl(195, 52%, 71%);
+    --col5: hsl(269, 100%, 91%);
+    --col6: hsl(300, 12%, 46%);
+}
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid lime; */
+}
+
+@font-face {
+    font-family: roboto;
+    src: url("./assets/Roboto/Roboto-Regular.ttf");
+}
+.germania-one-regular {
+    font-family: "Germania One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+html {
+    scroll-behavior: smooth;
+}
+#about {
+    scroll-margin-top: 100px;
+}
+body,
+#root {
+    min-height: 100svh;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    background: var(--col1);
+    font-family: roboto;
+    background: radial-gradient(
+            50% 50% at 100% 0,
+            var(--col6) 0% 5%,
+            var(--col1) 6% 15%,
+            var(--col6) 16% 25%,
+            var(--col1) 26% 35%,
+            var(--col6) 36% 45%,
+            var(--col1) 46% 55%,
+            var(--col6) 56% 65%,
+            var(--col1) 66% 75%,
+            var(--col6) 76% 85%,
+            var(--col1) 86% 95%,
+            #0000 96%
+        ),
+        radial-gradient(
+            50% 50% at 0 100%,
+            var(--col6) 0% 5%,
+            var(--col1) 6% 15%,
+            var(--col6) 16% 25%,
+            var(--col1) 26% 35%,
+            var(--col6) 36% 45%,
+            var(--col1) 46% 55%,
+            var(--col6) 56% 65%,
+            var(--col1) 66% 75%,
+            var(--col6) 76% 85%,
+            var(--col1) 86% 95%,
+            #0000 96%
+        ),
+        radial-gradient(
+            50% 50%,
+            var(--col6) 0% 5%,
+            var(--col1) 6% 15%,
+            var(--col6) 16% 25%,
+            var(--col1) 26% 35%,
+            var(--col6) 36% 45%,
+            var(--col1) 46% 55%,
+            var(--col6) 56% 65%,
+            var(--col1) 66% 75%,
+            var(--col6) 76% 85%,
+            var(--col1) 86% 95%,
+            #0000 96%
+        ),
+        radial-gradient(
+                50% 50%,
+                var(--col6) 0% 5%,
+                var(--col1) 6% 15%,
+                var(--col6) 16% 25%,
+                var(--col1) 26% 35%,
+                var(--col6) 36% 45%,
+                var(--col1) 46% 55%,
+                var(--col6) 56% 65%,
+                var(--col1) 66% 75%,
+                var(--col6) 76% 85%,
+                var(--col1) 86% 95%,
+                #0000 96%
+            )
+            100px 100px;
+    background-size: 200px 200px;
+    background-color: var(--col6);
+}
+
+.nav {
+    position: relative;
+    z-index: 0;
+}
+.nav-links {
+    text-align: center;
+    text-align: center;
+}
+.nav-links:nth-of-type(2) {
+    /* width: 15%; */
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.nav:before {
+    content: "";
+    width: 60%;
+    height: 2px;
+    position: absolute;
+    background: #fff;
+    z-index: -1;
+}
+.nav > a:nth-of-type(2n-1) {
+    width: 10%;
+    border: 0 2px solid white;
+}
+.grand-hotel {
+    font-family: grand-hotel;
+}
+.line {
+    height: 2px;
+    background-color: white;
+}
+.line:first-of-type,
+.line:last-of-type {
+    width: 15%;
+}
+.line:nth-of-type(2),
+.line:nth-of-type(3) {
+    width: 1.5rem;
+}
+.ranker {
+    height: 80svh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(--col2);
+    box-shadow: 0 0 1rem #00000066;
+    width: calc(100% - 6rem);
+}
+
+.spinner {
+    position: relative;
+    width: 22.4px;
+    height: 22.4px;
+}
+
+.spinner::before,
+.spinner::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    animation: spinner-b4c8mmmd 0.6s backwards,
+        spinner-49opz7md 1.5s 0.6s infinite ease;
+    border: 5.6px solid var(--col3);
+    border-radius: 50%;
+    box-shadow: 0 -33.6px 0 -5.6px var(--col3);
+    position: absolute;
+}
+
+.spinner::after {
+    animation-delay: 0s, 1.5s;
+}
+
+@keyframes spinner-b4c8mmmd {
+    from {
+        box-shadow: 0 0 0 -5.6px var(--col3);
+    }
+}
+
+@keyframes spinner-49opz7md {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.leaderinfo {
+    min-height: 80svh;
+    list-style-type: none;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    display: grid;
+}
+.lead-item {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--col2);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.lead-name {
+    font-weight: semi-bold;
+}
+.lead-rating {
+    color: lightgrey;
+}
+
+.bg-lines {
+    background-image: linear-gradient(
+        to right,
+        hsl(var(--col3-val), 0.1) 0%,
+        hsl(var(--col3-val), 0.1) 1px,
+        transparent 1px,
+        transparent 100%
+    );
+    background-size: 20svw 100%;
+    background-position: 50% 50%;
+}
+.ranker.grid {
+    flex-direction: column;
+}
+.rankcard {
+    background: #fff6;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 25svw;
+    height: 10svw;
+    position: relative;
+}
+.rankcard > img {
+    max-height: 100%;
+    width: 40%;
+    object-fit: contain;
+    position: absolute;
+    top: -60%;
+    filter: drop-shadow(0 0 0.5rem #00000088);
+}
+.rank-title {
+    text-shadow: 0 0 1rem black;
+}
+.rank-row {
+    height: 30svh;
+}
+.rank-row:nth-of-type(2) > .rankcard > img {
+    height: 80%;
+    top: -40%;
+}
+.lead-list {
+    max-width: calc(100% - 4rem);
+    width: 800px;
+    min-height: 100svh;
+}

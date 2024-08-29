@@ -11,14 +11,12 @@ Collect data to potentially analyze musical trends.
 Features
 
 - Random Song Selection: The system randomly picks two distinct songs from a database for comparison.
-
-- User Rating: Users select their preferred song from the presented pair.
-- Leaderboard: Tracks user accuracy and displays a ranking system.
+- Leaderboard: displays a ranking system.
 - Database: Stores song information, user ratings, and leaderboard data.
-- Technical Stack (Proposed)
-- Frontend: HTML, CSS, JavaScript
-- Backend: Python (Flask or Django)
-- Database: SQLite or PostgreSQL
+- Technical Stack : MERN
+- Frontend: HTML, CSS, JavaScript, React
+- Backend: NodeJS, ExpressJS
+- Database: MongoDB
 
 ### Potential Implementations
 - Song Metadata: Include additional information like album art, release date, and genre.

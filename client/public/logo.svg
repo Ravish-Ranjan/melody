@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="-6 -6 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <style bx:fonts="Germania One">@import url(https://fonts.googleapis.com/css2?family=Germania+One%3Aital%2Cwght%400%2C400&amp;display=swap);</style>
+  </defs>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(31, 41, 55);" cx="250" cy="248.661" rx="239.286" ry="238.839"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(102, 84, 102);" cx="249" cy="248.579" rx="226" ry="225.579"/>
+  <text style="fill: rgb(31, 41, 55); font-family: 'Germania One'; font-size: 371.4px; paint-order: stroke; stroke-opacity: 0; stroke-width: 0px; text-anchor: middle; text-transform: uppercase; white-space: pre;" x="266.307" y="389.393">M</text>
+  <text style="fill: rgb(255, 248, 117); font-family: 'Germania One'; font-size: 371.4px; paint-order: stroke; stroke-opacity: 0; stroke-width: 0px; text-anchor: middle; text-transform: uppercase; white-space: pre;" x="249.716" y="373.214">M</text>
+</svg>

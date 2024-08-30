@@ -128,7 +128,8 @@ function Ranker() {
 					onClick={() => handleClick(1)}
 					disabled={dis}
 					title={`"Rate ${data.song1.name} higher"`}
-				>
+					autoFocus={true}
+					>
 					<Right
 						color={dis ? "gray" : "var(--col4)"}
 						style={{ transform: "rotate(180deg)" }}
@@ -153,6 +154,7 @@ function Ranker() {
 					onClick={() => handleClick(2)}
 					disabled={dis}
 					title={`"Rate ${data.song2.name} higher"`}
+					autoFocus={true}
 				>
 					<Right
 						color={dis ? "gray" : "var(--col4)"}

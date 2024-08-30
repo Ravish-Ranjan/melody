@@ -3,7 +3,7 @@ import Error from "../assets/Error";
 
 function Leaderlist() {
     const [loading, setLoading] = useState(true);
-    const [limit, setLimit] = useState(18);
+    const [limit, setLimit] = useState(20);
     const [error, setError] = useState(null);
     const [data, setData] = useState([]);
 
@@ -26,6 +26,8 @@ function Leaderlist() {
         if (error) {
             setError(error);
         } else {
+            dat.shift();
+            dat.shift();
             dat.shift();
             setData(dat);
         }

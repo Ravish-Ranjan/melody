@@ -1,13 +1,16 @@
 function About() {
     return (
-        <div className="grid w-full place-items-center my-8" id="about">
+        <div className="grid w-full place-items-center mt-8" id="about">
             <h1
-                className="text-4xl font-semibold"
+                className="text-4xl font-semibold shadow-text"
                 style={{ color: "var(--col3)" }}
             >
                 What is this?
             </h1>
-            <p className="max-w-full w-3/4 text-center text-lg text-white">
+            <p
+                className="max-w-full w-3/4 text-center text-xl mt-4 "
+                style={{ color: "var(--col-white)" }}
+            >
                 Lorem ipsum dolor sit amet consectetur, adipisicing
                 elit.Repellendus voluptatum obcaecati reiciendis. Ut possimus
                 omnisplaceat dolor tenetur, quasi eveniet ex aspernatur

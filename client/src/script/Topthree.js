@@ -4,9 +4,14 @@ import rank2 from "../assets/rank2.png";
 import rank3 from "../assets/rank3.png";
 import Error from "../assets/Error";
 
-function RankCard({ rank, title, rating, artist }) {
+function RankCard({ data, rank }) {
     return (
-        <div className="flex flex-col justify-end items-center rankcard my-16">
+        <a
+            className="flex flex-col justify-end items-center rankcard my-16"
+            href={`https://www.youtube.com/watch?v=${data.url}`}
+            target="_blank"
+            rel="noreferrer"
+        >
             <img
                 src={rank === 1 ? rank1 : rank === 2 ? rank2 : rank3}
                 className=""
@@ -23,13 +28,13 @@ function RankCard({ rank, title, rating, artist }) {
                             : "#f5b77a",
                 }}
             >
-                {title}
+                {data.name}
             </span>
             <div className="flex w-full justify-between items-center text-xl text-white">
-                <span>{rating}</span>
-                <span>{artist}</span>
+                <span>{data.rating}</span>
+                <span>{data.artist}</span>
             </div>
-        </div>
+        </a>
     );
 }
 
@@ -83,26 +88,11 @@ function Topthree() {
     return (
         <div className="ranker grid place-items-center w-11/12 mt-10 bg-lines">
             <span className="rank-row w-full grid place-items-center">
-                <RankCard
-                    rank={1}
-                    title={top[0].name}
-                    artist={top[0].artist}
-                    rating={top[0].rating}
-                />
+                <RankCard rank={1} data={top[0]} />
             </span>
             <span className="flex gap-4 justify-evenly items-center w-full rank-row">
-                <RankCard
-                    rank={2}
-                    title={top[1].name}
-                    artist={top[1].artist}
-                    rating={top[1].rating}
-                />
-                <RankCard
-                    rank={3}
-                    title={top[2].name}
-                    artist={top[2].artist}
-                    rating={top[2].rating}
-                />
+                <RankCard rank={2} data={top[1]} />
+                <RankCard rank={3} data={top[2]} />
             </span>
         </div>
     );

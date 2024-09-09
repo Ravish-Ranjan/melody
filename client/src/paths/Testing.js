@@ -1,4 +1,4 @@
-import Footer from "./script/Footer";
+import Footer from "../script/Footer";
 
 function Testing() {
     return (

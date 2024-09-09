@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
+// connects to the database
 const connectDB = async (done) => {
 	try {
 		await mongoose.connect(process.env.MONGO_URI);
@@ -12,6 +13,7 @@ const connectDB = async (done) => {
 	}
 };
 
+// song schema for database table
 const SongSchema = new mongoose.Schema({
 	name: {
 		type: String,

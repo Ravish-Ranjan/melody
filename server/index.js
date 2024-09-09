@@ -5,6 +5,7 @@ const app = express();
 const port = process.env.PORT || 8000;
 app.use(express.json());
 
+// get the youtube video id form thier url
 const extractVideoId = (url) => {
     const regex =
         /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^/\n\s]+\/\S+\/|v\/|embed\/|watch\?v=)|youtu\.be\/)([^"&?/\s]{11})/;
@@ -12,6 +13,7 @@ const extractVideoId = (url) => {
     return match ? match[1] : null;
 };
 
+// get the top n songs based on thier rating
 app.get("/top/:count", async (req, res) => {
     try {
         const { count } = req.params;
@@ -26,6 +28,7 @@ app.get("/top/:count", async (req, res) => {
     }
 });
 
+// adds new song to the database
 app.post("/addsong", async (req, res) => {
     try {
         const newSong = new Song(req.body);
@@ -37,6 +40,7 @@ app.post("/addsong", async (req, res) => {
     }
 });
 
+// get 2 random songs from the database and sends it to client
 app.get("/getrandom", async (req, res) => {
     try {
         const count = await Song.countDocuments();
@@ -65,7 +69,8 @@ app.get("/getrandom", async (req, res) => {
         res.status(500).json({ err: err.message });
     }
 });
-
+ 
+// updates rating of songs based on user selection
 app.post("/updaterating", async (req, res) => {
     try {
         const doc_w = await Song.findOne({ _id: req.body.idw });

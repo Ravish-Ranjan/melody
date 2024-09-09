@@ -25,9 +25,9 @@ function RankCard({ rank, title, rating, artist }) {
             >
                 {title}
             </span>
-            <div className="flex w-full justify-between items-center text-xl font-semibold">
-                <span style={{ color: "var(--col2)" }}>{rating}</span>
-                <span style={{ color: "var(--col2)" }}>{artist}</span>
+            <div className="flex w-full justify-between items-center text-xl text-white">
+                <span>{rating}</span>
+                <span>{artist}</span>
             </div>
         </div>
     );

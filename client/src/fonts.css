@@ -1,0 +1,10 @@
+@font-face {
+    font-family: roboto;
+    src: url("./assets/Roboto/Roboto-Regular.ttf");
+}
+
+.germania-one-regular {
+    font-family: "Germania One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
